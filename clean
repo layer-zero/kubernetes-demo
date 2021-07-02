@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker image rm $(docker image ls -qf label=devcor)
+docker image rm devcor-app:latest devcor-app:$(cat VERSION)

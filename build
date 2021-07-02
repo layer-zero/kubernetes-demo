@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-docker build -t devcor-app --label devcor app
+docker build -t devcor-app app
+docker tag devcor-app:latest devcor-app:$(cat VERSION)
