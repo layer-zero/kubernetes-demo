@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: devcor-app
+  name: devcor-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devcor-app
+  template:
+    metadata:
+      labels:
+        app: devcor-app
+    spec:
+      containers:
+      - image: devcor-app:latest
+        name: devcor-app
+        imagePullPolicy: Never

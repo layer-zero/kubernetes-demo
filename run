@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+for yamlfile in *.yml
+do
+    kubectl apply -f $yamlfile
+done
