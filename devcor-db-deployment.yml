@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: devcor-db
+  name: devcor-db-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devcor-db
+  template:
+    metadata:
+      labels:
+        app: devcor-db
+    spec:
+      volumes:
+        - name: devcor-db-storage
+          hostPath:
+            path: "/Users/tom/Documents/Courses/Cisco/Current/devcor 1.0/software/kubernetes-demo/db"
+            type: Directory
+      containers:
+      - image: mysql:5.7
+        name: devcor-db
+        imagePullPolicy: Never
+        volumeMounts:
+          - mountPath: "/var/lib/mysql"
+            name: devcor-db-storage
+        env:
+          - name: MYSQL_ALLOW_EMPTY_PASSWORD
+            value: "yes"

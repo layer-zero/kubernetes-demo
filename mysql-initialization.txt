@@ -1,0 +1,9 @@
+To prep the mysql database for use, log into the mysql container using "kubectl exec devcor-db-deployment-745c48cd85-bj59h -it -- /bin/bash" replacing the container id with the appropriate id.
+Then go into msql using the "mysql" command and issue the following commands:
+
+CREATE DATABASE inventory;
+USE inventory;
+CREATE TABLE routers (hostname VARCHAR(255), ip VARCHAR(255));
+INSERT INTO routers VALUES ('r1.example.com', '192.168.1.1');
+INSERT INTO routers VALUES ('r2.example.com', '192.168.1.2');
+INSERT INTO routers VALUES ('r3.example.com', '192.168.1.3');
