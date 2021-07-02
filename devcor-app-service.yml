@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     app: devcor-app
-  name: devcor-app
+  name: devcor-app-service
   namespace: default
 spec:
   type: ClusterIP
