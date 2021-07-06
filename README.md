@@ -1,6 +1,8 @@
 # Kubernetes demo
 
-I created this demo while studying for the Cisco DEVCOR course. It contains the necessary files to deploy an application consisting of a simple web frontend and database backend to play with on a kubernetes cluster.
+I created this demo while studying for the Cisco DEVCOR course. It contains the necessary files to deploy an application consisting of a simple web frontend and database backend to play with on my local Kubernetes cluster.
+
+Also note that this demo was created using the Docker Desktop for Mac built-in Kubernetes cluster. To make this work on other Kubernetes deployments it will require some modifications. (For example, I am using the local Docker repository for the images and using a local directory as a volume for the database server, which will not work on other types of Kubernetes clusters without making appropriate modifications).
 
 First, build the local docker image using `./build`.<br>
 Then use `./run` to deploy the containers, create a service, and create an ingress.
