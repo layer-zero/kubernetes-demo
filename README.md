@@ -1,5 +1,7 @@
 # Kubernetes demo
 
+I created this demo while studying for the Cisco DEVCOR course. It contains the necessary files to deploy an application consisting of a simple web frontend and database backend to play with on a kubernetes cluster.
+
 First, build the local docker image using `./build`.<br>
 Then use `./run` to deploy the containers, create a service, and create an ingress.
 
